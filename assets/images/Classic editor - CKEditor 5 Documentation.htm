@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)https://ckeditor.com/docs/ckeditor5/latest/examples/builds/classic-editor.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="generator" content="Hexo 3.8.0">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Classic editor - CKEditor 5 Documentation</title>
+    <meta name="description" content="Learn how to install, integrate and configure CKEditor 5 Builds and how to work with CKEditor 5 Framework, customize it, create your own plugins and custom editors, change the UI or even bring your own UI to the editor. API reference and examples included.">
+    <meta name="twitter:card" content="Learn how to install, integrate and configure CKEditor 5 Builds and how to work with CKEditor 5 Framework, customize it, create your own plugins and custom editors, change the UI or even bring your own UI to the editor. API reference and examples included.">
+    <meta name="twitter:site" content="@ckeditor">
+    <meta property="og:title" content="Classic editor - CKEditor 5 Documentation">
+    <meta property="og:description" content="Learn how to install, integrate and configure CKEditor 5 Builds and how to work with CKEditor 5 Framework, customize it, create your own plugins and custom editors, change the UI or even bring your own UI to the editor. API reference and examples included.">
+    <meta property="og:image" content="https://ckeditor.com/docs/assets/img/og/ogimage-ecosystem.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/classic-editor.html">
+    <meta property="DC.language" content="en">
+    <meta property="DC.publisher" content="CKSource">
+    <meta property="DC.creator" content="CKEditor">
+    <meta property="DC.title" content="Classic editor - CKEditor 5 Documentation">
+    <meta property="DC.format" content="text/html">
+    <meta property="DC.type" content="Text">
+    <meta property="DC.description" content="Learn how to install, integrate and configure CKEditor 5 Builds and how to work with CKEditor 5 Framework, customize it, create your own plugins and custom editors, change the UI or even bring your own UI to the editor. API reference and examples included.">
+    <link rel="canonical" href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/classic-editor.html">
+    <link rel="icon" type="image/png" href="https://ckeditor.com/docs/ckeditor5/latest/assets/img/favicons/16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://ckeditor.com/docs/ckeditor5/latest/assets/img/favicons/32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://ckeditor.com/docs/ckeditor5/latest/assets/img/favicons/96x96.png" sizes="96x96">
+    <link rel="apple-touch-icon" type="image/png" href="https://ckeditor.com/docs/ckeditor5/latest/assets/img/favicons/200x200.png">
+    <link rel="stylesheet" href="./Classic editor - CKEditor 5 Documentation_files/docsearch.min.css">
+    <link rel="stylesheet" href="./Classic editor - CKEditor 5 Documentation_files/styles.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./Classic editor - CKEditor 5 Documentation_files/styles(1).css" type="text/css">
+    <link rel="stylesheet" href="./Classic editor - CKEditor 5 Documentation_files/snippet.css" type="text/css">
+    <link rel="stylesheet" href="./Classic editor - CKEditor 5 Documentation_files/snippet-styles.css" type="text/css">
+    <script type="text/javascript" async="" src="./Classic editor - CKEditor 5 Documentation_files/hotjar-183752.js"></script><script type="text/javascript" async="" src="./Classic editor - CKEditor 5 Documentation_files/analytics.js"></script><script id="emojics-js" async="" src="./Classic editor - CKEditor 5 Documentation_files/sdk.js"></script><script async="" src="./Classic editor - CKEditor 5 Documentation_files/gtm.js"></script><script>
+      ( function() {
+      	'use strict';
+      	// Set up global variables;
+      	if ( !window.umebrto ) {
+      		window.umberto = {};
+      	}
+      	window.umberto.relativeAppPath = "../../../../assets/1.0.0/scripts"
+      
+      	// Add app script
+      	var el = document.createElement( 'script' );
+      	el.setAttribute( 'async', 'async' );
+      	el.setAttribute( 'defer', 'defer' );
+      	if ( typeof Symbol === 'function' && typeof Symbol() === 'symbol' ) {
+      		el.src = "../../../../assets/1.0.0/scripts/app.js";
+      	} else {
+      		el.src = "../../../../assets/1.0.0/scripts/app-polyfill.js";
+      	}
+      	document.getElementsByTagName( 'head' )[ 0 ].appendChild( el );
+      
+      	// Changing documentation theme enable it via `localStorage.setItem( 'theme', 'theme-dark' )`
+      	if ( localStorage.getItem( 'theme' ) === 'theme-dark' ) {
+      		document.getElementsByTagName( 'html' )[ 0 ].classList.add( 'theme-dark' );
+      	}
+      } )();
+    </script><script async="async" defer="defer" src="./Classic editor - CKEditor 5 Documentation_files/app.js"></script>
+    <!-- Google Tag Manager-->
+    <script>if (["ckeditor.com"].indexOf(location.hostname) !== -1) {
+          (function (w, d, s, l, i) {
+              w[l] = w[l] || [];
+              w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+              var f = d.getElementsByTagName(s)[0],
+                  j = d.createElement(s),
+                  dl = l != 'dataLayer' ? '&l=' + l : '';
+              j.async = true;
+              j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+              f.parentNode.insertBefore(j, f);
+          })( window, document, 'script', 'dataLayer', 'GTM-KFSS6L' );
+      }
+      
+    </script>
+    <!-- End Google Tag Manager-->
+    <script>if ( ["ckeditor.com"].indexOf( location.hostname ) !== -1) {
+      	window.emojicsOpts = {
+      		widget: '50c7737f072dfd100f3dad0411f02e',
+      		position: 'inline'
+      	};
+      	( function( d, s, id ) {
+      		var js, fjs = d.getElementsByTagName( s )[ 0 ];
+      		js = d.createElement( s );
+      		js.id = id;
+      		js.async = 1;
+      		js.src = '//connect.emojics.com/dist/sdk.js';
+      		fjs.parentNode.insertBefore( js, fjs );
+      	} )( document, 'script', 'emojics-js' );
+      }
+    </script>
+  <script async="" src="./Classic editor - CKEditor 5 Documentation_files/modules.e73b9332ce167a5a2d34.js"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><style type="text/css">.medium-zoom-overlay{position:fixed;top:0;right:0;bottom:0;left:0;opacity:0;transition:opacity .3s;will-change:opacity}.medium-zoom--opened .medium-zoom-overlay{cursor:pointer;cursor:zoom-out;opacity:1}.medium-zoom-image{cursor:pointer;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,0,.2,1)}.medium-zoom-image--hidden{visibility:hidden}.medium-zoom-image--opened{position:relative;cursor:pointer;cursor:zoom-out;will-change:transform}</style></head>
+  <body>
+    <!-- Google Tag Manager (noscript)-->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFSS6L" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript)-->
+    <header class="top" data-project="ckeditor5">
+      <div class="header__main">
+        <div class="header__main-rwd-button"><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/classic-editor.html#"><span></span><span></span><span></span></a></div>
+        <div class="header__main-title"><a class="header__main-title-home" href="https://ckeditor.com/docs/index.html">CKEditor Ecosystem Documentation</a></div>
+        <div class="top__search">
+          <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input class="top__search__box ds-input" type="text" id="docsearch_input" placeholder="Search in CKEditor 5" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-label="search input" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Source Sans Pro&quot;, &quot;SF Pro Text&quot;, &quot;SF Pro Icons&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="ds-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;"><div class="ds-dataset-1"></div></span></span>
+          <div class="top__search__button"><img src="./Classic editor - CKEditor 5 Documentation_files/loupe.svg" alt="Search"></div>
+        </div>
+      </div>
+      <div class="header__sub">
+        <ul class="top__menu">
+          <li class="top__menu-project-logo"><a href="https://ckeditor.com/docs/ckeditor5/latest/index.html">CKEditor 5</a></li>
+          <li><a href="https://ckeditor.com/docs/ckeditor5/latest/builds/index.html">Builds</a></li>
+          <li><a href="https://ckeditor.com/docs/ckeditor5/latest/framework/index.html">Framework</a></li>
+          <li><a class="top__menu__item--active" href="https://ckeditor.com/docs/ckeditor5/latest/examples/index.html">Examples</a></li>
+          <li><a href="https://ckeditor.com/docs/ckeditor5/latest/features/index.html">Features</a></li>
+          <li><a class="top__menu__api" href="https://ckeditor.com/docs/ckeditor5/latest/api/index.html">API</a></li>
+          <li><a class="top__menu-github-link" href="https://github.com/ckeditor/ckeditor5" target="_blank" title="CKEditor 5 on GitHub."><svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg></a></li>
+        </ul>
+      </div>
+      <div class="header__menu-rwd">
+        <ul class="header__menu-rwd__projects">
+          <li data-project="ckeditor5"><a href="https://ckeditor.com/docs/ckeditor5/latest/index.html">CKEditor 5
+              </a><ul class="tree header__menu-rwd__projects-pages"><a href="https://ckeditor.com/docs/ckeditor5/latest/index.html">
+                </a><li data-group="builds"><a href="https://ckeditor.com/docs/ckeditor5/latest/index.html"></a><a href="https://ckeditor.com/docs/ckeditor5/latest/builds/index.html">Builds</a>
+                  <!-- Display subpages for active project.-->
+                </li>
+                <li data-group="framework"><a href="https://ckeditor.com/docs/ckeditor5/latest/framework/index.html">Framework</a>
+                  <!-- Display subpages for active project.-->
+                </li>
+                <li data-group="examples"><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/index.html">Examples</a>
+                  <!-- Display subpages for active project.-->
+                  <ul class="header__menu-rwd__projects-subpages">
+                            <li>
+                              <div class="tree__item__wrapper"><span class="tree__item--folder tree__item__text">Builds</span></div>
+                              <ul class="tree__item-nested-list">
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/classic-editor.html">
+                                        <div class="tree__item__wrapper tree__item__wrapper--active"><span class="tree__item--guide tree__item__text">Classic editor</span></div></a></li>
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/inline-editor.html">
+                                        <div class="tree__item__wrapper"><span class="tree__item--guide tree__item__text">Inline editor</span></div></a></li>
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/balloon-block-editor.html">
+                                        <div class="tree__item__wrapper"><span class="tree__item--guide tree__item__text">Balloon block editor</span></div></a></li>
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/balloon-editor.html">
+                                        <div class="tree__item__wrapper"><span class="tree__item--guide tree__item__text">Balloon editor</span></div></a></li>
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/document-editor.html">
+                                        <div class="tree__item__wrapper"><span class="tree__item--guide tree__item__text">Document editor</span></div></a></li>
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/custom-build.html">
+                                        <div class="tree__item__wrapper"><span class="tree__item--guide tree__item__text">Custom build</span></div></a></li>
+                              </ul>
+                            </li>
+                            <li>
+                              <div class="tree__item__wrapper"><span class="tree__item--folder tree__item__text">Framework</span></div>
+                              <ul class="tree__item-nested-list">
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/framework/chat-with-mentions.html">
+                                        <div class="tree__item__wrapper"><span class="tree__item--guide tree__item__text">Chat with mentions</span></div></a></li>
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/framework/theme-customization.html">
+                                        <div class="tree__item__wrapper"><span class="tree__item--guide tree__item__text">Theme customization</span></div></a></li>
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/framework/custom-ui.html">
+                                        <div class="tree__item__wrapper"><span class="tree__item--guide tree__item__text">Custom UI (with Bootstrap)</span></div></a></li>
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/framework/multi-root-editor.html">
+                                        <div class="tree__item__wrapper"><span class="tree__item--guide tree__item__text">Multi-root editor</span></div></a></li>
+                              </ul>
+                            </li>
+                  </ul>
+                </li>
+                <li data-group="features"><a href="https://ckeditor.com/docs/ckeditor5/latest/features/index.html">Features</a>
+                  <!-- Display subpages for active project.-->
+                </li>
+                <li data-group="api-reference"><a href="https://ckeditor.com/docs/ckeditor5/latest/api/index.html">API</a>
+                  <!-- Display subpages for active project.-->
+                </li>
+              </ul></li>
+          <li data-project="ckeditor4"><a href="https://ckeditor.com/docs/ckeditor4/latest/index.html">CKEditor 4</a></li>
+          <li data-project="letters"><a href="https://ckeditor.com/docs/letters/latest/guides/overview.html">Letters</a></li>
+          <li data-project="cs"><a href="https://ckeditor.com/docs/cs/latest/guides/overview.html">Cloud Services</a></li>
+          <li data-project="ckfinder"><a href="https://ckeditor.com/docs/ckfinder/latest/index.html">CKFinder</a></li>
+        </ul>
+      </div>
+    </header>
+    <main class="main">
+      <section class="main__content formatted">
+        <div class="main__content-inner">
+          <div class="github-contrib"><a href="https://github.com/ckeditor/ckeditor5/blob/master/docs/examples/builds/classic-editor.md" title="Contribute to this guide"><img src="./Classic editor - CKEditor 5 Documentation_files/edit.svg" alt="Contribute to this guide"></a><a href="https://github.com/ckeditor/ckeditor5/issues/new" title="Report an issue"><img src="./Classic editor - CKEditor 5 Documentation_files/exclamation-circle.svg" alt="Report an issue"></a>
+          </div>
+          <div class="rwd-breadcrumbs"><a href="https://ckeditor.com/docs/index.html">Home</a><span class="rwd-breadcrumbs__separator">/</span><a href="https://ckeditor.com/docs/ckeditor5/latest/index.html">CKEditor 5</a><span class="rwd-breadcrumbs__separator">/</span><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/index.html">Examples</a>
+          </div>
+          <h1 class="main__content-title"><img src="./Classic editor - CKEditor 5 Documentation_files/book.svg" alt="guide">Classic editor
+          </h1>
+
+<p><a href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor">Classic editor</a> shows a boxed editing area with a toolbar, placed in a specific position on the page.</p>
+<div class="live-snippet"><div id="snippet-classic-editor" style="display: none;">
+	<h2>The three greatest things you learn from traveling</h2>
+
+	<p>Like all the great things on earth traveling teaches us by example. Here are some of the most precious lessons I’ve learned over the years of traveling.</p>
+
+	<figure class="media">
+		<oembed url="https://www.youtube.com/watch?v=BLJ4GKKaiXw"></oembed>
+	</figure>
+
+	<h3>Appreciation of diversity</h3>
+
+	<p>Getting used to an entirely different culture can be challenging. While it’s also nice to learn about cultures online or from books, nothing comes close to experiencing cultural diversity in person. You learn to appreciate each and every single one of the differences while you become more culturally fluid.</p>
+
+	<blockquote>
+		<p>The real voyage of discovery consists not in seeking new landscapes, but having new eyes.</p>
+		<p><strong>Marcel Proust</strong></p>
+	</blockquote>
+
+	<h3>Improvisation</h3>
+
+	<p>Life doesn't allow us to execute every single plan perfectly. This especially seems to be the case when you travel. You plan it down to every minute with a big checklist; but when it comes to executing it, something always comes up and you’re left with your improvising skills. You learn to adapt as you go. Here’s how my travel checklist looks now:</p>
+
+	<ul>
+		<li>buy the ticket</li>
+		<li>start your adventure</li>
+	</ul>
+
+	<figure class="image image-style-side"><img src="./Classic editor - CKEditor 5 Documentation_files/umbrellas.jpg" alt="Three Monks walking on ancient temple.">
+		<figcaption>Leaving your comfort zone might lead you to such beautiful sceneries like this one.</figcaption>
+	</figure>
+
+	<h3>Confidence</h3>
+
+	<p>Going to a new place can be quite terrifying. While change and uncertainty makes us scared, traveling teaches us how ridiculous it is to be afraid of something before it happens. The moment you face your fear and see there was nothing to be afraid of, is the moment you discover bliss.</p>
+</div><div class="ck ck-reset ck-editor ck-rounded-corners" role="application" dir="ltr" lang="en" aria-labelledby="ck-editor__aria-label_e2b8a5f02fea7f272e6e2a39ed0c53b92"><label class="ck ck-label ck-voice-label" id="ck-editor__aria-label_e2b8a5f02fea7f272e6e2a39ed0c53b92">Rich Text Editor</label><div class="ck ck-editor__top ck-reset_all" role="presentation"><div class="ck ck-sticky-panel"><div class="ck ck-sticky-panel__placeholder" style="display: none;"></div><div class="ck ck-sticky-panel__content" style=""><div class="ck ck-toolbar"><div class="ck ck-dropdown ck-heading-dropdown"><button class="ck ck-button ck-off ck-button_with-text ck-dropdown__button" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_ef9ea645268ff6e95e00056612ca583b1" aria-haspopup="true"><span class="ck ck-tooltip ck-tooltip_s"><span class="ck ck-tooltip__text">Heading</span></span><span class="ck ck-button__label" id="ck-editor__aria-label_ef9ea645268ff6e95e00056612ca583b1">Paragraph</span><svg class="ck ck-icon ck-dropdown__arrow" viewBox="0 0 10 10"><path d="M.941 4.523a.75.75 0 1 1 1.06-1.06l3.006 3.005 3.005-3.005a.75.75 0 1 1 1.06 1.06l-3.549 3.55a.75.75 0 0 1-1.168-.136L.941 4.523z"></path></svg></button><div class="ck ck-reset ck-dropdown__panel ck-dropdown__panel_se"><ul class="ck ck-reset ck-list"><li class="ck ck-list__item"><button class="ck ck-button ck-heading_paragraph ck-on ck-button_with-text" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_ef843c03b3b534cea69d625c6fc688b33" aria-pressed="true"><span class="ck ck-tooltip ck-tooltip_s ck-hidden"><span class="ck ck-tooltip__text"></span></span><span class="ck ck-button__label" id="ck-editor__aria-label_ef843c03b3b534cea69d625c6fc688b33">Paragraph</span></button></li><li class="ck ck-list__item"><button class="ck ck-button ck-heading_heading1 ck-off ck-button_with-text" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_e485a520ee189893440ece14abba4fc16"><span class="ck ck-tooltip ck-tooltip_s ck-hidden"><span class="ck ck-tooltip__text"></span></span><span class="ck ck-button__label" id="ck-editor__aria-label_e485a520ee189893440ece14abba4fc16">Heading 1</span></button></li><li class="ck ck-list__item"><button class="ck ck-button ck-heading_heading2 ck-off ck-button_with-text" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_e06e82d8f6da436f55af3151f8f68d184"><span class="ck ck-tooltip ck-tooltip_s ck-hidden"><span class="ck ck-tooltip__text"></span></span><span class="ck ck-button__label" id="ck-editor__aria-label_e06e82d8f6da436f55af3151f8f68d184">Heading 2</span></button></li><li class="ck ck-list__item"><button class="ck ck-button ck-heading_heading3 ck-off ck-button_with-text" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_e11bcef9c827f83827a3687edfb10c605"><span class="ck ck-tooltip ck-tooltip_s ck-hidden"><span class="ck ck-tooltip__text"></span></span><span class="ck ck-button__label" id="ck-editor__aria-label_e11bcef9c827f83827a3687edfb10c605">Heading 3</span></button></li></ul></div></div><span class="ck ck-toolbar__separator"></span><button class="ck ck-button ck-off" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_e8d28f99d27d744fb888c4d38c41ba78d"><svg class="ck ck-icon ck-button__icon" viewBox="0 0 20 20"><path d="M10.187 17H5.773c-.637 0-1.092-.138-1.364-.415-.273-.277-.409-.718-.409-1.323V4.738c0-.617.14-1.062.419-1.332.279-.27.73-.406 1.354-.406h4.68c.69 0 1.288.041 1.793.124.506.083.96.242 1.36.478.341.197.644.447.906.75a3.262 3.262 0 0 1 .808 2.162c0 1.401-.722 2.426-2.167 3.075C15.05 10.175 16 11.315 16 13.01a3.756 3.756 0 0 1-2.296 3.504 6.1 6.1 0 0 1-1.517.377c-.571.073-1.238.11-2 .11zm-.217-6.217H7v4.087h3.069c1.977 0 2.965-.69 2.965-2.072 0-.707-.256-1.22-.768-1.537-.512-.319-1.277-.478-2.296-.478zM7 5.13v3.619h2.606c.729 0 1.292-.067 1.69-.2a1.6 1.6 0 0 0 .91-.765c.165-.267.247-.566.247-.897 0-.707-.26-1.176-.778-1.409-.519-.232-1.31-.348-2.375-.348H7z"></path></svg><span class="ck ck-tooltip ck-tooltip_s"><span class="ck ck-tooltip__text">Bold (⌘B)</span></span><span class="ck ck-button__label" id="ck-editor__aria-label_e8d28f99d27d744fb888c4d38c41ba78d">Bold</span></button><button class="ck ck-button ck-off" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_ed2f37584d0e87aa8abb1a89090bb7eff"><svg class="ck ck-icon ck-button__icon" viewBox="0 0 20 20"><path d="M9.586 14.633l.021.004c-.036.335.095.655.393.962.082.083.173.15.274.201h1.474a.6.6 0 1 1 0 1.2H5.304a.6.6 0 0 1 0-1.2h1.15c.474-.07.809-.182 1.005-.334.157-.122.291-.32.404-.597l2.416-9.55a1.053 1.053 0 0 0-.281-.823 1.12 1.12 0 0 0-.442-.296H8.15a.6.6 0 0 1 0-1.2h6.443a.6.6 0 1 1 0 1.2h-1.195c-.376.056-.65.155-.823.296-.215.175-.423.439-.623.79l-2.366 9.347z"></path></svg><span class="ck ck-tooltip ck-tooltip_s"><span class="ck ck-tooltip__text">Italic (⌘I)</span></span><span class="ck ck-button__label" id="ck-editor__aria-label_ed2f37584d0e87aa8abb1a89090bb7eff">Italic</span></button><button class="ck ck-button ck-off" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_e4b9a19be7d725ebe28edfa9bee1f07f6"><svg class="ck ck-icon ck-button__icon" viewBox="0 0 20 20"><path d="M11.077 15l.991-1.416a.75.75 0 1 1 1.229.86l-1.148 1.64a.748.748 0 0 1-.217.206 5.251 5.251 0 0 1-8.503-5.955.741.741 0 0 1 .12-.274l1.147-1.639a.75.75 0 1 1 1.228.86L4.933 10.7l.006.003a3.75 3.75 0 0 0 6.132 4.294l.006.004zm5.494-5.335a.748.748 0 0 1-.12.274l-1.147 1.639a.75.75 0 1 1-1.228-.86l.86-1.23a3.75 3.75 0 0 0-6.144-4.301l-.86 1.229a.75.75 0 0 1-1.229-.86l1.148-1.64a.748.748 0 0 1 .217-.206 5.251 5.251 0 0 1 8.503 5.955zm-4.563-2.532a.75.75 0 0 1 .184 1.045l-3.155 4.505a.75.75 0 1 1-1.229-.86l3.155-4.506a.75.75 0 0 1 1.045-.184z"></path></svg><span class="ck ck-tooltip ck-tooltip_s"><span class="ck ck-tooltip__text">Link (⌘K)</span></span><span class="ck ck-button__label" id="ck-editor__aria-label_e4b9a19be7d725ebe28edfa9bee1f07f6">Link</span></button><button class="ck ck-button ck-off" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_e5a1e0aa1006d6ea561aa05129ae934bd"><svg class="ck ck-icon ck-button__icon" viewBox="0 0 20 20"><path d="M7 5.75c0 .414.336.75.75.75h9.5a.75.75 0 1 0 0-1.5h-9.5a.75.75 0 0 0-.75.75zm-6 0C1 4.784 1.777 4 2.75 4c.966 0 1.75.777 1.75 1.75 0 .966-.777 1.75-1.75 1.75C1.784 7.5 1 6.723 1 5.75zm6 9c0 .414.336.75.75.75h9.5a.75.75 0 1 0 0-1.5h-9.5a.75.75 0 0 0-.75.75zm-6 0c0-.966.777-1.75 1.75-1.75.966 0 1.75.777 1.75 1.75 0 .966-.777 1.75-1.75 1.75-.966 0-1.75-.777-1.75-1.75z"></path></svg><span class="ck ck-tooltip ck-tooltip_s"><span class="ck ck-tooltip__text">Bulleted List</span></span><span class="ck ck-button__label" id="ck-editor__aria-label_e5a1e0aa1006d6ea561aa05129ae934bd">Bulleted List</span></button><button class="ck ck-button ck-off" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_ea9e195e9c6cfa5b3d64df43cec4631ac"><svg class="ck ck-icon ck-button__icon" viewBox="0 0 20 20"><path d="M7 5.75c0 .414.336.75.75.75h9.5a.75.75 0 1 0 0-1.5h-9.5a.75.75 0 0 0-.75.75zM3.5 3v5H2V3.7H1v-1h2.5V3zM.343 17.857l2.59-3.257H2.92a.6.6 0 1 0-1.04 0H.302a2 2 0 1 1 3.995 0h-.001c-.048.405-.16.734-.333.988-.175.254-.59.692-1.244 1.312H4.3v1h-4l.043-.043zM7 14.75a.75.75 0 0 1 .75-.75h9.5a.75.75 0 1 1 0 1.5h-9.5a.75.75 0 0 1-.75-.75z"></path></svg><span class="ck ck-tooltip ck-tooltip_s"><span class="ck ck-tooltip__text">Numbered List</span></span><span class="ck ck-button__label" id="ck-editor__aria-label_ea9e195e9c6cfa5b3d64df43cec4631ac">Numbered List</span></button><span class="ck-file-dialog-button"><button class="ck ck-button ck-off" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_e352173b1ab69497dead54bc0052834f2"><svg class="ck ck-icon ck-button__icon" viewBox="0 0 20 20"><path d="M6.91 10.54c.26-.23.64-.21.88.03l3.36 3.14 2.23-2.06a.64.64 0 0 1 .87 0l2.52 2.97V4.5H3.2v10.12l3.71-4.08zm10.27-7.51c.6 0 1.09.47 1.09 1.05v11.84c0 .59-.49 1.06-1.09 1.06H2.79c-.6 0-1.09-.47-1.09-1.06V4.08c0-.58.49-1.05 1.1-1.05h14.38zm-5.22 5.56a1.96 1.96 0 1 1 3.4-1.96 1.96 1.96 0 0 1-3.4 1.96z"></path></svg><span class="ck ck-tooltip ck-tooltip_s"><span class="ck ck-tooltip__text">Insert image</span></span><span class="ck ck-button__label" id="ck-editor__aria-label_e352173b1ab69497dead54bc0052834f2">Insert image</span></button><input class="ck-hidden" type="file" tabindex="-1" accept="image/*" multiple="true"></span><button class="ck ck-button ck-off" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_eb8bc4a0fd74b5bc36318abc8df0ed87c"><svg class="ck ck-icon ck-button__icon" viewBox="0 0 20 20"><path d="M3 10.423a6.5 6.5 0 0 1 6.056-6.408l.038.67C6.448 5.423 5.354 7.663 5.22 10H9c.552 0 .5.432.5.986v4.511c0 .554-.448.503-1 .503h-5c-.552 0-.5-.449-.5-1.003v-4.574zm8 0a6.5 6.5 0 0 1 6.056-6.408l.038.67c-2.646.739-3.74 2.979-3.873 5.315H17c.552 0 .5.432.5.986v4.511c0 .554-.448.503-1 .503h-5c-.552 0-.5-.449-.5-1.003v-4.574z"></path></svg><span class="ck ck-tooltip ck-tooltip_s"><span class="ck ck-tooltip__text">Block quote</span></span><span class="ck ck-button__label" id="ck-editor__aria-label_eb8bc4a0fd74b5bc36318abc8df0ed87c">Block quote</span></button><div class="ck ck-dropdown"><button class="ck ck-button ck-off ck-dropdown__button" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_e0b42cd321807749c2f45a0471fc937f5" aria-haspopup="true"><svg class="ck ck-icon ck-button__icon" viewBox="0 0 20 20"><path d="M3 6v3h4V6H3zm0 4v3h4v-3H3zm0 4v3h4v-3H3zm5 3h4v-3H8v3zm5 0h4v-3h-4v3zm4-4v-3h-4v3h4zm0-4V6h-4v3h4zm1.5 8a1.5 1.5 0 0 1-1.5 1.5H3A1.5 1.5 0 0 1 1.5 17V4c.222-.863 1.068-1.5 2-1.5h13c.932 0 1.778.637 2 1.5v13zM12 13v-3H8v3h4zm0-4V6H8v3h4z"></path></svg><span class="ck ck-tooltip ck-tooltip_s"><span class="ck ck-tooltip__text">Insert table</span></span><span class="ck ck-button__label" id="ck-editor__aria-label_e0b42cd321807749c2f45a0471fc937f5">Insert table</span><svg class="ck ck-icon ck-dropdown__arrow" viewBox="0 0 10 10"><path d="M.941 4.523a.75.75 0 1 1 1.06-1.06l3.006 3.005 3.005-3.005a.75.75 0 1 1 1.06 1.06l-3.549 3.55a.75.75 0 0 1-1.168-.136L.941 4.523z"></path></svg></button><div class="ck ck-reset ck-dropdown__panel ck-dropdown__panel_se"><div class="ck"><div class="ck-insert-table-dropdown__grid"><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div><div class="ck-insert-table-dropdown-grid-box"></div></div><div class="ck-insert-table-dropdown__label">0 x 0</div></div></div></div><div class="ck ck-dropdown"><button class="ck ck-button ck-off ck-dropdown__button" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_e2e4c3973392c1cb7e1bfd56a250e6a99" aria-haspopup="true"><svg class="ck ck-icon ck-button__icon" viewBox="0 0 20 20"><path d="M18.68 2.53c.6 0 .59-.03.59.55v12.84c0 .59.01.56-.59.56H1.29c-.6 0-.59.03-.59-.56V3.08c0-.58-.01-.55.6-.55h17.38zM15.77 14.5v-10H4.2v10h11.57zM2 4v1h1V4H2zm0 2v1h1V6H2zm0 2v1h1V8H2zm0 2v1h1v-1H2zm0 2v1h1v-1H2zm0 2v1h1v-1H2zM17 4v1h1V4h-1zm0 2v1h1V6h-1zm0 2v1h1V8h-1zm0 2v1h1v-1h-1zm0 2v1h1v-1h-1zm0 2v1h1v-1h-1zM7.5 6.677a.4.4 0 0 1 .593-.351l5.133 2.824a.4.4 0 0 1 0 .7l-5.133 2.824a.4.4 0 0 1-.593-.35V6.676z"></path></svg><span class="ck ck-tooltip ck-tooltip_s"><span class="ck ck-tooltip__text">Insert media</span></span><span class="ck ck-button__label" id="ck-editor__aria-label_e2e4c3973392c1cb7e1bfd56a250e6a99">Insert media</span><svg class="ck ck-icon ck-dropdown__arrow" viewBox="0 0 10 10"><path d="M.941 4.523a.75.75 0 1 1 1.06-1.06l3.006 3.005 3.005-3.005a.75.75 0 1 1 1.06 1.06l-3.549 3.55a.75.75 0 0 1-1.168-.136L.941 4.523z"></path></svg></button><div class="ck ck-reset ck-dropdown__panel ck-dropdown__panel_se"><form class="ck ck-media-form" tabindex="-1"><div class="ck ck-labeled-input"><label class="ck ck-label" for="ck-input-e87ab27aaa36486c09e087ed157db3b94">Media URL</label><input type="text" class="ck ck-input ck-input-text" id="ck-input-e87ab27aaa36486c09e087ed157db3b94" placeholder="https://example.com" aria-describedby="ck-status-ec8de80cb600fc8d437474b49516cb28f"><div class="ck ck-labeled-input__status" id="ck-status-ec8de80cb600fc8d437474b49516cb28f">Paste the media URL in the input.</div></div><button class="ck ck-button ck-off ck-button-save" type="submit" tabindex="-1" aria-labelledby="ck-editor__aria-label_e99aba42db3d26704f21e3ca05532d82b"><svg class="ck ck-icon ck-button__icon" viewBox="0 0 20 20"><path d="M6.972 16.615a.997.997 0 0 1-.744-.292l-4.596-4.596a1 1 0 1 1 1.414-1.414l3.926 3.926 9.937-9.937a1 1 0 0 1 1.414 1.415L7.717 16.323a.997.997 0 0 1-.745.292z"></path></svg><span class="ck ck-tooltip ck-tooltip_s"><span class="ck ck-tooltip__text">Save</span></span><span class="ck ck-button__label" id="ck-editor__aria-label_e99aba42db3d26704f21e3ca05532d82b">Save</span></button><button class="ck ck-button ck-off ck-button-cancel" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_ee999a4f356b6294104148fd32312ff46"><svg class="ck ck-icon ck-button__icon" viewBox="0 0 20 20"><path d="M11.591 10.177l4.243 4.242a1 1 0 0 1-1.415 1.415l-4.242-4.243-4.243 4.243a1 1 0 0 1-1.414-1.415l4.243-4.242L4.52 5.934A1 1 0 0 1 5.934 4.52l4.243 4.243 4.242-4.243a1 1 0 1 1 1.415 1.414l-4.243 4.243z"></path></svg><span class="ck ck-tooltip ck-tooltip_s"><span class="ck ck-tooltip__text">Cancel</span></span><span class="ck ck-button__label" id="ck-editor__aria-label_ee999a4f356b6294104148fd32312ff46">Cancel</span></button></form></div></div><button class="ck ck-button ck-off" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_e9402e709e45d3316de70eb4dc21413a5"><svg class="ck ck-icon ck-button__icon" viewBox="0 0 20 20"><path d="M5.042 9.367l2.189 1.837a.75.75 0 0 1-.965 1.149l-3.788-3.18a.747.747 0 0 1-.21-.284.75.75 0 0 1 .17-.945L6.23 4.762a.75.75 0 1 1 .964 1.15L4.863 7.866h8.917A.75.75 0 0 1 14 7.9a4 4 0 1 1-1.477 7.718l.344-1.489a2.5 2.5 0 1 0 1.094-4.73l.008-.032H5.042z"></path></svg><span class="ck ck-tooltip ck-tooltip_s"><span class="ck ck-tooltip__text">Undo (⌘Z)</span></span><span class="ck ck-button__label" id="ck-editor__aria-label_e9402e709e45d3316de70eb4dc21413a5">Undo</span></button><button class="ck ck-button ck-disabled ck-off" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_e9673ff073762b29aa2908cc2fbf93058" aria-disabled="true"><svg class="ck ck-icon ck-button__icon" viewBox="0 0 20 20"><path d="M14.958 9.367l-2.189 1.837a.75.75 0 0 0 .965 1.149l3.788-3.18a.747.747 0 0 0 .21-.284.75.75 0 0 0-.17-.945L13.77 4.762a.75.75 0 1 0-.964 1.15l2.331 1.955H6.22A.75.75 0 0 0 6 7.9a4 4 0 1 0 1.477 7.718l-.344-1.489A2.5 2.5 0 1 1 6.039 9.4l-.008-.032h8.927z"></path></svg><span class="ck ck-tooltip ck-tooltip_s"><span class="ck ck-tooltip__text">Redo (⌘Y)</span></span><span class="ck ck-button__label" id="ck-editor__aria-label_e9673ff073762b29aa2908cc2fbf93058">Redo</span></button></div></div></div></div><div class="ck ck-editor__main" role="presentation"><div class="ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline ck-focused" role="textbox" aria-label="Rich Text Editor, main" contenteditable="true"><p>qfwrf</p></div></div></div>
+</div>
+
+          <div class="feedback-widget">
+            <div id="emojics-root" style="position: relative; clear: both;"><iframe id="emojics-widget-calltoaction" src="./Classic editor - CKEditor 5 Documentation_files/index.html" allowtransparency="true" style="width: 100%; height: 60px; display: block; border: none; position: relative; background: none rgba(0, 0, 0, 0); visibility: visible; opacity: 1; transition: none 0s ease 0s; margin-bottom: 0px; bottom: auto;"></iframe><iframe id="emojics-widget-reactions" allowtransparency="true" src="./Classic editor - CKEditor 5 Documentation_files/index(1).html" style="width: 100%; height: 89px; display: block; border: none; position: relative; background: none rgba(0, 0, 0, 0); visibility: visible; opacity: 1; transition: none 0s ease 0s; margin-bottom: 0px; max-width: 100%; margin-top: -20px;"></iframe></div>
+          </div>
+        </div>
+      </section>
+      <div class="side-navigation">
+        <div class="side-navigation__wrapper">
+          <nav class="side-navigation__inner">
+            <ul class="tree guide-tree">
+                          <li>
+                            <div class="tree__item__wrapper"><span class="tree__item--folder tree__item__text">Builds</span></div>
+                            <ul class="tree__item-nested-list">
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/classic-editor.html">
+                                        <div class="tree__item__wrapper tree__item__wrapper--active"><span class="tree__item--guide tree__item__text">Classic editor</span></div></a></li>
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/inline-editor.html">
+                                        <div class="tree__item__wrapper"><span class="tree__item--guide tree__item__text">Inline editor</span></div></a></li>
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/balloon-block-editor.html">
+                                        <div class="tree__item__wrapper"><span class="tree__item--guide tree__item__text">Balloon block editor</span></div></a></li>
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/balloon-editor.html">
+                                        <div class="tree__item__wrapper"><span class="tree__item--guide tree__item__text">Balloon editor</span></div></a></li>
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/document-editor.html">
+                                        <div class="tree__item__wrapper"><span class="tree__item--guide tree__item__text">Document editor</span></div></a></li>
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/custom-build.html">
+                                        <div class="tree__item__wrapper"><span class="tree__item--guide tree__item__text">Custom build</span></div></a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <div class="tree__item__wrapper"><span class="tree__item--folder tree__item__text">Framework</span></div>
+                            <ul class="tree__item-nested-list">
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/framework/chat-with-mentions.html">
+                                        <div class="tree__item__wrapper"><span class="tree__item--guide tree__item__text">Chat with mentions</span></div></a></li>
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/framework/theme-customization.html">
+                                        <div class="tree__item__wrapper"><span class="tree__item--guide tree__item__text">Theme customization</span></div></a></li>
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/framework/custom-ui.html">
+                                        <div class="tree__item__wrapper"><span class="tree__item--guide tree__item__text">Custom UI (with Bootstrap)</span></div></a></li>
+                                    <li><a href="https://ckeditor.com/docs/ckeditor5/latest/examples/framework/multi-root-editor.html">
+                                        <div class="tree__item__wrapper"><span class="tree__item--guide tree__item__text">Multi-root editor</span></div></a></li>
+                            </ul>
+                          </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </main>
+    <footer class="footer footer--bordered">
+      <p>© 2003-2019 <a href="http://cksource.com/">CKSource</a>. All rights reserved.</p>
+    </footer>
+    <script type="text/javascript" src="./Classic editor - CKEditor 5 Documentation_files/docsearch.min.js"></script><script type="text/javascript">
+docsearch({
+apiKey:'7fd1a5354ceba927a56450ce0459620d',indexName:'ckeditor_docs_site',inputSelector:'#docsearch_input',algoliaOptions:{hitsPerPage:250,attributesToRetrieve:'*',facetFilters:['tags: ckeditor5']},
+transformData: function( hits ) {var sortingFn = function( a, b ) {a.custom_ranking = a.custom_ranking || 0;b.custom_ranking = b.custom_ranking || 0;if ( a.custom_ranking === b.custom_ranking ) return a.index - b.index;if ( a.custom_ranking > b.custom_ranking ) return -1;if ( a.custom_ranking < b.custom_ranking ) return 1;};var result = [];var tags = [ 'builds', 'framework', 'examples', 'features', 'api' ];var hitsGrouped = { api: [] };hitsGrouped[ 'examples' ] = hits.filter( function( h ) {return h.tags.includes( 'examples' );} ).slice( 0, 7 ).map( function( item, idx ) {item.index = idx;return item;} ).sort( sortingFn );tags.forEach( function( tag ) {if ( tag !== 'examples' ) {hitsGrouped[ tag ] = hits.filter( function( h ) {return h.tags.includes( tag );} ).slice( 0, 10 ).map( function( item, idx ) {item.index = idx;return item;} ).sort( sortingFn ).slice( 0, 3 );}} );var apiSearchHits = [];if ( window.apiSearch ) apiSearchHits = window.apiSearch();hitsGrouped.api = hitsGrouped.api.filter( function( h ) {var isDuplicated = false;for ( var i = 0; i < apiSearchHits.length; i++ ) {if ( h.url.includes( apiSearchHits[ i ].urlShort ) ) {isDuplicated = true;break;}}return !isDuplicated;} );hitsGrouped.api = ( apiSearchHits || [] ).concat( hitsGrouped.api );result = result.concat( hitsGrouped[ 'examples' ] );tags.forEach( function( tag ) {if ( tag !== 'examples' ) result = result.concat( hitsGrouped[ tag ].slice( 0, 4 ) );} );return result;}
+});
+</script>
+    <script src="./Classic editor - CKEditor 5 Documentation_files/snippet.js"></script>
+    <script src="./Classic editor - CKEditor 5 Documentation_files/snippet(1).js"></script>
+    <script src="./Classic editor - CKEditor 5 Documentation_files/snippet(2).js"></script>
+  
+<div id="ads"></div><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./Classic editor - CKEditor 5 Documentation_files/box-90f3a29ef7448451db5af955688970d7.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><div class="ck ck-reset_all ck-body ck-rounded-corners"><div class="ck ck-balloon-panel ck-balloon-panel_arrow_nw ck-balloon-panel_with-arrow" style="top: 0px; left: 0px;"><div class="ck ck-balloon-rotator" z-index="-1"><div class="ck-balloon-rotator__navigation ck-hidden"><button class="ck ck-button ck-off" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_e3486d55f5bdcfb7a7c8e9a99a10049da"><svg class="ck ck-icon ck-button__icon" viewBox="0 0 20 20"><path d="M11.463 5.187a.888.888 0 1 1 1.254 1.255L9.16 10l3.557 3.557a.888.888 0 1 1-1.254 1.255L7.26 10.61a.888.888 0 0 1 .16-1.382l4.043-4.042z"></path></svg><span class="ck ck-tooltip ck-tooltip_s"><span class="ck ck-tooltip__text">Previous</span></span><span class="ck ck-button__label" id="ck-editor__aria-label_e3486d55f5bdcfb7a7c8e9a99a10049da">Previous</span></button><span class="ck-balloon-rotator__counter"></span><button class="ck ck-button ck-off" type="button" tabindex="-1" aria-labelledby="ck-editor__aria-label_e7551a5a4f81741af294b5020b96a6b0d"><svg class="ck ck-icon ck-button__icon" viewBox="0 0 20 20"><path d="M8.537 14.813a.888.888 0 1 1-1.254-1.255L10.84 10 7.283 6.442a.888.888 0 1 1 1.254-1.255L12.74 9.39a.888.888 0 0 1-.16 1.382l-4.043 4.042z"></path></svg><span class="ck ck-tooltip ck-tooltip_s"><span class="ck ck-tooltip__text">Next</span></span><span class="ck ck-button__label" id="ck-editor__aria-label_e7551a5a4f81741af294b5020b96a6b0d">Next</span></button></div><div class="ck-balloon-rotator__content"></div></div></div><div class="ck-fake-panel ck-hidden" style="top: 0px; left: 0px; width: 0px; height: 0px;"></div></div></body></html>
